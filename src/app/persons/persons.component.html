@@ -1,0 +1,23 @@
+<div class="container">
+  
+    <h1>Angular 17 Create Custom Pipe Example - ItSolutionStuff.com</h1>
+  
+    <!-- New @for loop -->
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Website</th>
+      </tr>
+      @for (person of persons; track person.id;) {
+        <tr>
+          <td>{{ person.id }}</td>
+          <td>{{ person.name }}</td>
+          <td>{{ person.gender | gender }}</td>
+          <td>{{ person.website }}</td>
+        </tr>
+      }
+    </table>
+  
+</div>

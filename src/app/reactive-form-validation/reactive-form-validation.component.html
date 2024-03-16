@@ -1,0 +1,36 @@
+<p>reactive-form-validation works!</p>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" dir="rtl" class="container ">
+    <div>
+      <label for="email">אימייל</label>
+      <input type="email" formControlName="email" id="email"
+      [class.is-invalid]="f['email'].invalid && (f['email'].dirty || f['email'].touched)">
+        @if (f['email'].errors && (f['email'].touched || f['email'].dirty)) {
+            @if(f['email'].hasError('required')){
+                <div class="text-danger">{{ errorMessagesService.getErrorMessage('required') }}</div>
+            }
+            @if(f['email'].hasError('email')){
+                <div class="text-danger">{{ errorMessagesService.getErrorMessage('email') }}</div>
+            }           
+        }             
+    </div>
+    <div>
+      <label for="password">סיסמה</label>
+      <input type="password" formControlName="password" id="password"
+      [class.is-invalid]="f['password'].invalid && (f['password'].dirty || f['password'].touched)">      
+      @if (f['password'].errors && (f['password'].touched || f['password'].dirty)) {            
+        @if(f['password'].hasError('required')){
+            <div class="text-danger">{{ errorMessagesService.getErrorMessage('required') }}</div>
+        }
+        @if(f['password'].hasError('minlength')){            
+            <div class="text-danger">{{ errorMessagesService.getErrorMessage('minlength') + minPasswordLenght}}</div>
+        }           
+        @if(f['password'].hasError('customMaxLength')){    
+            <div class="text-danger">{{ errorMessagesService.getErrorMessage('customMaxLength')  + maxPasswordLenght}}</div>
+        }  
+    }
+    </div>
+    <button type="submit">הרשמה</button>
+</form>
+
+  

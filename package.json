@@ -1,5 +1,5 @@
 {
-  "name": "my-first-project",
+  "name": "angular-17-advanced-options",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-first-project": "node dist/my-first-project/server/server.mjs"
+    "serve:ssr:angular-17-advanced-options": "node dist/angular-17-advanced-options/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "@angular/platform-server": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.3",
+    "bootstrap": "^5.3.3",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

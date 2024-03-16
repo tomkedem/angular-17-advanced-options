@@ -1,0 +1,70 @@
+.is-invalid {
+  border: 2px solid #dc3545; /* גבול אדום בולט */
+  background-color: #fff5f5; /* רקע עדין */
+}
+
+.is-invalid:focus {
+  border-color: #e54343; /* צבע גבול כאשר השדה בפוקוס */
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* הוספת צל קל סביב השדה */
+}
+.text-danger {
+  color: #dc3545; /* שימוש באותו צבע כמו הגבול לאחידות */
+  margin-top: 5px;
+  font-size: 0.875em;
+}
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  form div {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  
